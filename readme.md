@@ -81,6 +81,8 @@ I also didn't handle possible failure modes that could happen if I called the sc
 I didn't create a CLI application because the only possible input and output are csv files names/locations.
 
 I modelled the types(models.py) based on Waterfall API documents. It's a bit of an overkill for this task, but it made code easier to read and understand. It's also easy to add/change/remove fields if needed. 
+I didn't store company or task/job data into the database, because there is no added value for this task. 
+I also didn't add any indexes or foreign keys to the database, because I don't know what queries will be run against it.
 
 ## Potential improvements
 
@@ -92,6 +94,7 @@ This script only does what was asked. To make this a production ready applicatio
 - add error recovery logic
 - create an async version of job fetching
 - batch inserts into the database after number of contacts reaches a certain threshold (1000?)
+- store company and task data in the database
 
 
 
